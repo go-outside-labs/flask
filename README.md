@@ -1,16 +1,22 @@
-Playing with Flask
-===================
+Neat Examples on Python and Flask - Hacker School 2014
+========================================================
 
-Some getting started and further examples with Flask, a web framework for Python.
 
-[See my tutorial](https://mariwahl.hackpad.com/My-notes-on-Flask-WATyr1XGlm4).
+Neat problems in Python:
 
-Examples in this repository:
+    * Useful snippets (a library with a selection of useful stuff)
 
     * b3g git-like Version Control
+
+
+
+
+[See my tutorial in Flask](https://mariwahl.hackpad.com/My-notes-on-Flask-WATyr1XGlm4).
+
+Examples using Flask:
+
 
     * A MicroBlog.
 
     * A URL shortener.
 
-    * Useful snippets (a library with a selection of useful stuff)

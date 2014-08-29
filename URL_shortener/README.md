@@ -2,7 +2,7 @@ An URL Shortener App
 ====================
 
 
-![](http://i.imgur.com/HAHi4Sh.png)
+![](hhttp://i.imgur.com/NBhzb6B.png)
 
 
 Background

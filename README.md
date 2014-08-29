@@ -8,3 +8,5 @@ Some getting started and further examples with Flask, a web framework for Python
 Examples in this repository:
 
     * A MicroBlog.
+
+    * A URL shortener.

@@ -1,0 +1,37 @@
+html, body {
+    height: calc(100% - 20px);
+    margin: 15px;
+    min-width: 750px;
+    min-height: 300px;
+    font-size: 100%;
+    font-family: "Courier";
+    background-color: #F8E9D5;
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    margin-bottom: 1em;
+    font-color: #3D4048;
+}
+h2 {
+    font-size: 20px;
+    margin-bottom: 1em;
+    font-color: #AA7570;
+}
+h3 {
+    font-size: 50px;
+    font-color: #AA7570;
+}
+h5 {
+    font-size: 9px;
+    font-color: #A5C5AF;
+}
+.page {
+    margin: 2em 2em 2em 2em;
+    border: 5px solid #ccc;
+    padding: 2em;
+}
+input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

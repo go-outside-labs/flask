@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Short URL App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class=page>
+        <h1>Short URL App</h1>
+
+        <p>
+            <form action="/short" method="post" name="input">
+                <input id="url" name="url" type="text" placeholder="http://www.a.long.url.com">
+                <input type="submit" value="Get shorter URL!">
+            </form>
+        </p>
+
+        {% block new_url %}{% endblock %}
+
+    </div>
+
+    <p>
+        <h5>Made with Love at Hacker School - Marina Wahl - 2014
+    </p>
+
+
+</body>
+
+</html>

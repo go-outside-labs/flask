@@ -7,6 +7,10 @@ Some getting started and further examples with Flask, a web framework for Python
 
 Examples in this repository:
 
+    * b3g git-like Version Control
+
     * A MicroBlog.
 
     * A URL shortener.
+
+    * Useful snippets (a library with a selection of useful stuff)

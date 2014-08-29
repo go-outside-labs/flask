@@ -1,0 +1,42 @@
+#!/bin/bash
+
+usage(){
+    echo " ~.~.~.~.~.~.~ b3g Version Control ~.~.~.~.~.~.~ "
+    echo
+    echo "Usage: $0 [OPTION] <ARGUMENT(S)>"
+    echo
+    echo "Options: "
+    echo
+    echo "      config <WORKFOLDER>:     "
+    echo "                  Set the configuration file (in the root)."
+    echo "                  <WORKFOLDER> is where is the root of your project."
+    echo "                  Should be called when starting a project."
+    echo
+    echo "      snapshot <TAG>:"
+    echo "                  Create a snapshot. Works with ss too."
+    echo "                  <TAG> is optional, and it will be written in the HEAD file."
+    echo
+    echo "      current:"
+    echo "                  Show the current snapshot."
+    echo
+    echo "      checkout <SNAPSHOT>:"
+    echo "                  Checkout a snapshot. Works with co too."
+    echo "                  <SNAPSHOT> is a number, or l for the latest."
+    echo
+    echo "      log: "
+    echo "                  Show snapshot logs."
+    echo
+    echo "      diff <SNAPSHOT1> <SNAPSHOT2>: "
+    echo "                  Show the difference between 2 snapshots."
+    echo
+    echo "      rm: "
+    echo "                  Terminate project, removing config files."
+    echo
+    exit 1
+}
+
+# invoke  usage
+# call usage() function if filename not supplied
+[[ $# -eq 0 ]] && usage
+
+python ./src/b3g.py "$@"

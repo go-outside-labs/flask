@@ -1,8 +1,8 @@
-Neat Examples on Python and Flask - Hacker School 2014
+Neat Examples on Python and Flask
 ========================================================
 
-
-Neat problems in Python:
+Python:
+------
 
     * Useful snippets (a library with a selection of useful stuff)
 
@@ -10,13 +10,15 @@ Neat problems in Python:
 
 
 
+Flask:
+------
 
 [See my tutorial in Flask](https://mariwahl.hackpad.com/My-notes-on-Flask-WATyr1XGlm4).
-
-Examples using Flask:
 
 
     * A MicroBlog.
 
     * A URL shortener.
 
+
+Plus some snippets and scripts for reference. Many of these examples were written at Hacker School, 2014.

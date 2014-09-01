@@ -4,21 +4,10 @@ body {
     font-family: "Courier New", monospace;
 }
 }
-h1{
-    font-size: 12px;
-    margin-bottom: 1em;
-    font-color: #66CCCC;
-    text-align: center;
-}
-h12 {
+h1, h2 {
     font-size: 10px;
     margin-bottom: 1em;
     font-color: #66CCCC;
-}
-h5 {
-    font-size: 9px;
-    font-color: #A5C5AF;
-    text-align: center;
 }
 a {
     font-color: #00CC99;

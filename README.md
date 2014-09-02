@@ -1,10 +1,13 @@
 Neat Examples on Python and Flask
 ========================================================
 
+Applications you find here:
+
+
 Python:
 ------
 
-    * Useful snippets (a library with a selection of useful stuff)
+    * Useful snippets: a library with a selection of useful stuff, including benchmarking, testing, and other minor things.
 
     * b3g git-like Version Control
 
@@ -13,12 +16,16 @@ Python:
 Flask:
 ------
 
-[See my tutorial in Flask](https://mariwahl.hackpad.com/My-notes-on-Flask-WATyr1XGlm4).
+    * A MicroBlog: a very simple application in Flash.
+
+    * A URL shortener (like bit.ly).
+
+    * A Twitter like application, with users, posts, etc.
+
+    * An Email application
+
+    * Useful snippets: a library with a selection of useful stuff, including many examples for single Flask features, migration, testing, etc.
 
 
-    * A MicroBlog.
-
-    * A URL shortener.
 
 
-Plus some snippets and scripts for reference. Many of these examples were written at Hacker School, 2014.

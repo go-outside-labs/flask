@@ -1,0 +1,12 @@
+>>> u = User()
+>>> u.password = 'cat'
+>>> u.password_hash
+'pbkdf2:sha1:1000$kngzgufO$9344d0300227618fe2d5bfa10b716159afa50a32'
+>>> u.verify_password('catt')
+False
+>>> u.verify_password('cat')
+True
+>>> u.password = 'cat'
+>>> u.password_hash
+'pbkdf2:sha1:1000$I6thwWKL$1e1206393114eda365db9d27a3a41f6f19b021dc'
+>>>

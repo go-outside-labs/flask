@@ -1,0 +1,3 @@
+>>> u=User(email="aa@sss.com", username="mari", password="cat")
+>>> db.session.add(u)
+>>> db.session.commit()

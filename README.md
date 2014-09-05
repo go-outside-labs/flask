@@ -22,7 +22,7 @@ Applications you find here:
 
 ## Others:
 
-[Check out the Anti-Social Network (Flask)]https://github.com/mariwahl/The-Anti-Social-Network).
+[Check out the Anti-Social Network (Flask)](https://github.com/mariwahl/The-Anti-Social-Network).
 
 [Check out my book in Algorithms & Python](https://github.com/mariwahl/Python-and-Algorithms-and-Data-Structures).
 

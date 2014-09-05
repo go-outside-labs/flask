@@ -1,29 +1,30 @@
-Neat Examples on Python and Flask
-========================================================
+# Neat Examples on Python and Flask
 
 Applications you find here:
 
 
-Python:
-------
-
-    * Useful snippets (benchmarking, testing, etc).
+## Python:
 
     * b3g git-like Version Control
 
+    * Useful snippets (benchmarking, testing, etc).
 
 
-Flask:
-------
 
-    * A MicroBlog: a very simple application in Flash.
+## Flask:
+
+    * A MicroBlog: a simple form application in Flask.
 
     * A URL shortener (like bit.ly).
 
-    * A Twitter like application, with users, posts, etc.
-
     * Useful snippets (examples for single Flask features, migration, testing, etc).
 
+
+## Others:
+
+    * [Check out the Anti-Social Network (Flask)]https://github.com/mariwahl/The-Anti-Social-Network).
+
+    * [Check out my book in Algorithms & Python](https://github.com/mariwahl/Python-and-Algorithms-and-Data-Structures).
 
 
 

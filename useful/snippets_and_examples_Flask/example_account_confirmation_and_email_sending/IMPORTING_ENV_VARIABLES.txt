@@ -1,8 +1,0 @@
-(venv) $ export MAIL_USERNAME=<Gmail username>
-(venv) $ export MAIL_PASSWORD=<Gmail password>
-(venv) $ export FLASKY_ADMIN=<your-email-address>
-
-
-
-sup3r4nt1s0c14l
-thesuperantisocialnetwork@gmail.com

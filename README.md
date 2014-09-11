@@ -5,7 +5,9 @@ Applications you find here:
 
 ## Python:
 
-    * b3g git-like Version Control
+    * git-like Version Control
+
+    * Many faces of RECURSION.
 
     * Useful snippets (benchmarking, testing, etc).
 

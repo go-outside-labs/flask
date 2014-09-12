@@ -9,7 +9,7 @@ Command Line Phone Book
 
 A command line tool that manages phone books.
 
-It uses ```pickle``` to save a Python dictionary (lookup O(1).
+It uses ```pickle``` to save a Python dictionary (lookup O(1)).
 
 
 #### Admin Commands
@@ -41,7 +41,7 @@ $ ./phonebook.py find_num <number>
 
 # lookup numbers matching <name>
 $ ./phonebook.py find <name>
-
+```
 
 #### Example
 

@@ -12,11 +12,8 @@ A command line tool that manages phone books.
 #### Admin Commands
 
 ```
-# Create a new database or upgrade it:
-$ ./phonebook.py db upgrade
-
-# Backup database (migration)
-$ ./phonebook.py db migrate
+# Create a new database:
+$ ./phonebook.py create <dbname>
 
 # tests
 $ ./phonebook.py tests
@@ -37,14 +34,12 @@ $ ./phonebook.py change <name> <number>
 $ ./phonebook.py remove <name>
 
 # Lookup names matching <number>
-$ ./phonebook.py find -n <number>
+$ ./phonebook.py find_num <number>
 
 # lookup numbers matching <name>
 $ ./phonebook.py find <name>
 
-# help/usage
-$ ./phonebook.py help
-```
+
 
 
 

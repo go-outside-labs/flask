@@ -83,22 +83,9 @@ def diff(backup_dir, ss1, ss2):
 """
     Defining where to place the version control (.b3g)
 """
-def first_configuration(arg1):
-
-    if not arg1:
-        arg1 = input("Location of the project (myproject): ")
-        if arg1 == "" or not os.path.exists(arg1) or arg1 == "." or arg1 == "..":
-            print("This location is not valid. Setting project at './workplace' folder.")
-            arg1 = 'workplace'
-
-    system_operations.creating_dir_tree(workplace)
-    system_operations.creating_file(CONFIG_FILE)
-    system_operations.writing_file(CONFIG_FILE, 'w', arg1)
-
-    return arg1
 
 
-def define_work_folders(arg1):
+def define_work_folders(arg1=None):
     arg1 = arg1 or ""
 
     # if this is the first time or if there is an argument for location

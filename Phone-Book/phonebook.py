@@ -12,7 +12,7 @@ import pickle
 dbname = 'phonebook.pickle'
 
 
-def create_db():
+def create_db(dbname=dbname):
     db = {}
 
     with open(dbname, 'wb') as f:
@@ -23,21 +23,20 @@ def create_db():
 
 
 
-def add_entry(values):
+def add_entry(values, dbname=dbname):
     if len(values) != 2:
         print("Invalid number of arguments.")
         sys.exit(0)
 
-    name, phone = values
-    cleansing_name(name)
-    cleansing_phone(phone)
+    name = cleansing_name(values[0])
+    phone = cleansing_phone(values[1])
 
-    with open(r"phonebook.pickle", 'rb') as f:
+    with open(dbname, 'rb') as f:
         db = pickle.load(f)
 
     db[name] = phone
 
-    with open(r"phonebook.pickle", 'wb') as f:
+    with open(dbname, 'wb') as f:
         pickle.dump(db, f)
 
     print("New entry added.")
@@ -45,22 +44,21 @@ def add_entry(values):
 
 
 
-def change_number(values):
+def change_number(values, dbname=dbname):
     if len(values) != 2:
         print("Invalid number of arguments.")
         sys.exit(0)
 
-    name, newphone = values
-    cleansing_name(name)
-    cleansing_phone(newphone)
+    name = cleansing_name(values[0])
+    newphone = cleansing_phone(values[1])
 
 
-    with open(r"phonebook.pickle", 'rb') as f:
+    with open(dbname, 'rb') as f:
         db = pickle.load(f)
 
     db[name] = newphone
 
-    with open(r"phonebook.pickle", 'wb') as f:
+    with open(dbname, 'wb') as f:
         pickle.dump(db, f)
 
     print name + " entry changed to " + newphone
@@ -69,20 +67,19 @@ def change_number(values):
 
 
 
-def del_entry(values):
+def del_entry(values, dbname=dbname):
     if len(values) != 1:
         print("Invalid number of arguments.")
         sys.exit(0)
 
-    name = values[0]
+    name = cleansing_name(values[0])
 
-
-    with open(r"phonebook.pickle", 'rb') as f:
+    with open(dbname, 'rb') as f:
         db = pickle.load(f)
 
     del db[name]
 
-    with open(r"phonebook.pickle", 'wb') as f:
+    with open(dbname, 'wb') as f:
         pickle.dump(db, f)
 
     print name + " deleted"
@@ -90,12 +87,12 @@ def del_entry(values):
 
 
 
-def find_name(values):
+def find_name(values, dbname=dbname):
     if len(values) != 1:
         print("Invalid number of arguments.")
         sys.exit(0)
 
-    name = values[0]
+    name = cleansing_name(values[0])
 
     with open(dbname, 'r+') as f:
         db = pickle.load(f)
@@ -103,16 +100,16 @@ def find_name(values):
 
         if phone:
             print "Phone for " + name + " is " + phone
+            return True
         else:
             print "Name not found."
+            return False
 
 
 
 
 
-
-
-def find_phone(values):
+def find_phone(values,dbname=dbname):
     if len(values) != 1:
         print("Invalid number of arguments.")
         sys.exit(0)
@@ -125,8 +122,10 @@ def find_phone(values):
         try:
             name = (key for key,value in db.items() if value==phone).next()
             print "Name for " + phone + " is " + name
+            return True
         except:
             print "Phone not found."
+            return False
 
 
 
@@ -134,6 +133,7 @@ def find_phone(values):
 def cleansing_name(string):
     try:
         assert(len(string) < 30)
+        return string.title()
     except:
         print("Name is too long. Try a shorter one.")
         sys.exit(0)
@@ -144,6 +144,7 @@ def cleansing_name(string):
 def cleansing_phone(string):
     try:
         assert(len(string) < 12)
+        return string
     except:
         print("Phone number is too long. Try a shorter one.")
         sys.exit(0)

@@ -6,6 +6,10 @@ A command line tool that manages phone books.
 
 It uses ```pickle``` to save a Python dictionary (lookup O(1)).
 
+This program is optimized for case insensitive inputs.
+
+
+
 
 #### Admin Commands
 
@@ -14,7 +18,7 @@ It uses ```pickle``` to save a Python dictionary (lookup O(1)).
 $ ./phonebook.py create
 
 # tests
-$ ./phonebook.py tests
+$ ./test_phonebook.py
 
 ```
 

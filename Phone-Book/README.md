@@ -1,9 +1,10 @@
-# b3g PhoneBook Manager
-
+ b3g PhoneBook Manager
+=======================
 
 You can use this software in the **command line** or as a **web app**.
 
-## Command Line Phone Book
+Command Line Phone Book
+------------------------
 
 A command line tool that manages phone books.
 
@@ -47,7 +48,8 @@ $ ./phonebook.py help
 
 
 
-## A PhoneBook Web App
+A PhoneBook Web App
+---------------------
 
 #### To Install and Use
 
@@ -67,7 +69,8 @@ $ python manage runserver
 
 
 
-## Aux Functions (preparation):
+Aux Functions (preparation):
+-----------------------------
 - parsing command-line arguments
 - data structures that allow fast lookup (hash tables)
 - looking through strings for matches
@@ -77,7 +80,8 @@ $ python manage runserver
 
 
 
-## To Do
+To Do
+------
 - allow search by partial name - not just beginning of name
 - case insensitive search
 - make names work without using quotes

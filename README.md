@@ -7,19 +7,21 @@ Applications you find here:
 
     * git-like Version Control
 
-    * Many faces of RECURSION.
+    * Many faces of **Recursion**
 
-    * Useful snippets (benchmarking, testing, etc).
+    * CI Phone-Book Manager
+
+    * Useful snippets (benchmarking, testing, etc)
 
 
 
 ## Flask:
 
-    * A MicroBlog: a simple form application in Flask.
+    * A MicroBlog: a simple form application in Flask
 
-    * A URL shortener (like bit.ly).
+    * A URL shortener (like bit.ly)
 
-    * Useful snippets (examples for single Flask features, migration, testing, etc).
+    * Useful snippets (examples for single Flask features, migration, testing, etc)
 
 
 ## Others:

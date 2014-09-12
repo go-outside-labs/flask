@@ -7,9 +7,21 @@ __description__= "CI PhoneBook Manager"
 
 
 
+USAGE = """
+Usage:
+    python phonebook.py create
+    python phonebook.py find <name>
+    python phonebook.py add <name> <number>
+    python phonebook.py change <name> <number>
+    python phonebook.py find_num <number>
+    python phonebook.py show
+"""
+
+
 import sys
 import pickle
 dbname = 'phonebook.pickle'
+
 
 
 def create_db(dbname=dbname):
@@ -31,10 +43,14 @@ def add_entry(values, dbname=dbname):
     name = cleansing_name(values[0])
     phone = cleansing_phone(values[1])
 
-    with open(dbname, 'rb') as f:
-        db = pickle.load(f)
+    try:
+        with open(dbname, 'rb') as f:
+            db = pickle.load(f)
 
-    db[name] = phone
+        db[name] = phone
+    except IOError:
+        return ['No phonebook was found.']
+
 
     with open(dbname, 'wb') as f:
         pickle.dump(db, f)
@@ -52,9 +68,11 @@ def change_number(values, dbname=dbname):
     name = cleansing_name(values[0])
     newphone = cleansing_phone(values[1])
 
-
-    with open(dbname, 'rb') as f:
-        db = pickle.load(f)
+    try:
+        with open(dbname, 'rb') as f:
+            db = pickle.load(f)
+    except IOError:
+        return ['No phonebook was found.']
 
     db[name] = newphone
 
@@ -74,8 +92,11 @@ def del_entry(values, dbname=dbname):
 
     name = cleansing_name(values[0])
 
-    with open(dbname, 'rb') as f:
-        db = pickle.load(f)
+    try:
+        with open(dbname, 'rb') as f:
+            db = pickle.load(f)
+    except IOError:
+        return ['No phonebook was found.']
 
     del db[name]
 
@@ -94,18 +115,30 @@ def find_name(values, dbname=dbname):
 
     name = cleansing_name(values[0])
 
-    with open(dbname, 'r+') as f:
-        db = pickle.load(f)
-        phone = db.get(name)
+    try:
+        with open(dbname, 'r+') as f:
+            db = pickle.load(f)
+            phone = db.get(name)
 
-        if phone:
-            print "Phone for " + name + " is " + phone
-            return True
-        else:
-            print "Name not found."
-            return False
+            if phone:
+                print "Phone for " + name + " is " + phone
+                return True
+            else:
+                print "Name not found."
+                return False
+    except IOError:
+        return ['No phonebook was found.']
 
 
+
+def show_names():
+    try:
+        with open(dbname, 'r+') as f:
+            db = pickle.load(f)
+            for name, phone in db.items():
+                print "Name: " + name + ", Phone: " + phone
+    except IOError:
+        return ['No phonebook was found.']
 
 
 
@@ -116,17 +149,19 @@ def find_phone(values,dbname=dbname):
 
     phone = values[0]
 
-    with open(dbname, 'rb') as f:
-        db = pickle.load(f)
+    try:
+        with open(dbname, 'rb') as f:
+            db = pickle.load(f)
 
-        try:
-            name = (key for key,value in db.items() if value==phone).next()
-            print "Name for " + phone + " is " + name
-            return True
-        except:
-            print "Phone not found."
-            return False
-
+            try:
+                name = (key for key,value in db.items() if value==phone).next()
+                print "Name for " + phone + " is " + name
+                return True
+            except:
+                print "Phone not found."
+                return False
+    except IOError:
+        return ['No phonebook was found.']
 
 
 
@@ -135,8 +170,7 @@ def cleansing_name(string):
         assert(len(string) < 30)
         return string.title()
     except:
-        print("Name is too long. Try a shorter one.")
-        sys.exit(0)
+        return ["Name is too long. Try a shorter one."]
 
 
 
@@ -146,8 +180,7 @@ def cleansing_phone(string):
         assert(len(string) < 12)
         return string
     except:
-        print("Phone number is too long. Try a shorter one.")
-        sys.exit(0)
+        return ["Phone number is too long. Try a shorter one."]
 
 
 
@@ -175,6 +208,7 @@ def main():
                 ["remove",  'del_entry(values)'], \
                 ["find_num",  'find_phone(values)'], \
                 ["find",  'find_name(values)'],\
+                ["show",  'show_names()'],\
                 ["create", "create_db()"]]
 
     for o in options:
@@ -188,4 +222,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    status = main()
+    sys.exit(status)

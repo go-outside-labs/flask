@@ -40,6 +40,10 @@ $ ./phonebook.py find_num <number>
 
 # lookup numbers matching <name>
 $ ./phonebook.py find <name>
+
+
+# show the entire list
+$ ./phonebook.py show
 ```
 
 #### Example

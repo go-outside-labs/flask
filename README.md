@@ -9,7 +9,7 @@ Applications you find here:
 
     * Many faces of **Recursion**
 
-    * CI Phone-Book Manager
+    * A Command Line Phone-Book Manager.
 
     * Useful snippets (benchmarking, testing, etc)
 
@@ -20,6 +20,8 @@ Applications you find here:
     * A MicroBlog: a simple form application in Flask
 
     * A URL shortener (like bit.ly)
+
+    * A Web App Phone Book Manager.
 
     * Useful snippets (examples for single Flask features, migration, testing, etc)
 

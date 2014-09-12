@@ -1,11 +1,6 @@
  b3g PhoneBook Manager
 =======================
 
-You can use this software in the command line or as a web app.
-
-
-Command Line Phone Book
-------------------------
 
 A command line tool that manages phone books.
 

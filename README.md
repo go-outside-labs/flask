@@ -21,8 +21,6 @@ Applications you find here:
 
     * A URL shortener (like bit.ly)
 
-    * A Web App Phone Book Manager.
-
     * Useful snippets (examples for single Flask features, migration, testing, etc)
 
 

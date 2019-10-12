@@ -1,13 +1,13 @@
 # 🚀Several Examples in Flask
 
-
+* a Scrabble online game.
 * git-like Version Control
-* Many faces of **Recursion**
+* Many faces of **Recursion**.
 * A Command Line Phone-Book Manager.
 * buoyFlex: lets you customize data served by the **[National Data Buoy Center](http://www.ndbc.noaa.gov/)** so that you can favorite and list your buoy stations.
-* A MicroBlog: a simple form application in Flask
-* A URL shortener (like bit.ly)
-* Useful snippets (examples for single Flask features, migration, testing, etc)
+* A MicroBlog: a simple form application in Flask.
+* A URL shortener (like bit.ly).
+* Useful snippets (examples for single Flask features, migration, testing, etc).
 
 
 ## Others

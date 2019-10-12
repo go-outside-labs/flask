@@ -1,0 +1,14 @@
+Flask==0.12.2
+WTForms==2.1
+Flask-SQLAlchemy==2.2
+SQLAlchemy==1.2.8
+bcrypt==3.1.4
+requests==2.18.4
+feedparser==5.2.1
+bs4==0.0.1
+lxml==4.2.1
+pyyaml==3.12
+
+
+
+

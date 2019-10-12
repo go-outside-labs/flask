@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+#-----------------------------
+#   Database Config
+#-----------------------------
+SQLALCHEMY_DATABASE_URI: 'sqlite:///ndbc_stations.db'
+# How you run the app
+HOST: 0.0.0.0
+PORT: 1337
+DEBUG_MODE: True
+USE_RELOADER: True
+
+#-----------------------------
+#   Feed Config
+#-----------------------------
+NDBC_URL: http://www.ndbc.noaa.gov/rss/ndbc_obs_search.php?lat={0}&lon={1}&radius={2}
+# The rule above will be completed with the following data:
+LAT: 40N
+LON: 73W
+RAD: 100
+# Display info about ship stations as well
+SHOW_SHIPS: False
+

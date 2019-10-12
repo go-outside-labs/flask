@@ -1,0 +1,41 @@
+{% extends "navbar.html" %}
+{% block content %}
+
+
+<title>buoyFlex - List of Favorite Stations</title>
+
+<section class="hero is-primary is-bold is-small">
+
+    <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns">
+
+            <p class="title is-4">Your favorite stations are:</p>
+            <div class="column is-auto">
+              <br>
+
+              {% for result in fav_stations %}
+              <div class="stations-box" >
+                <div class="stations-area" >
+
+                    <ul>
+                    <p class="title is-6">Name: {{ result.name }}</p>
+                    <p class="title is-6">ID: {{ result.station_id }}</p>
+                    <p class="title is-6">Coordinates: {{ result.coordinates }}</p>
+                    <p class="title is-6">Reading: {{ result.data }}</p>
+                    </ul>
+
+                </div>
+            </div>
+
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+{% endblock %}

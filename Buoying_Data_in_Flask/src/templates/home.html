@@ -1,0 +1,57 @@
+{% extends "navbar.html" %}
+{% block content %}
+
+
+<title>buoyFlex - List of Stations</title>
+
+<section class="hero is-primary is-bold is-small">
+
+    <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns">
+
+            <div class="column is-auto">
+              <br>
+              <p class="title is-2">Hi, {{user.name}}!</p>
+              <p class="title is-4">These are all the stations based on your search settings:</p>
+
+              {% for result in stations_list %}
+              <div class="stations-box" >
+                <div class="stations-area" >
+
+
+                    <ul>
+
+                    <p class="title is-6">Name: {{ result.name }}</p>
+                    <p class="title is-6">ID: {{ result.id }}</p>
+                    <p class="title is-6">Coordinates: {{ result.coordinates }}</p>
+
+                    {% for data in result.data %}
+                    <li> {{ data }}</li>
+                    {% endfor %}
+
+                    <div>
+                    <form method="post" action="/stations">
+                       <button type="submit" value="{{ result.name }}; {{ result.id }}; {{ result.coordinates }}; {{ result.data }}" input name="results">Add to Favorites
+                    </button>
+                    </form>
+                    </div>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+{% endblock %}
+
+
